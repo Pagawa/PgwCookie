@@ -9,12 +9,9 @@
 ;(function($){
     $.pgwCookie = function(config) {
 
-        var defaults = {};
-        config = $.extend({}, defaults, config);
-
-        // Check if the name parameter exists
+        // Check if the parameter name exists
         if (! config.name) {
-            throw new Error('PgwCookie - Please provide a name for your cookie');
+            throw new Error('PgwCookie - Please provide a name to your cookie');
         }
 
         // Set cookie
