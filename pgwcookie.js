@@ -44,7 +44,7 @@
 
                 for (var i in cookies) {
                     var cookieParts = cookies[i].split('=');
-                    var cookieName = decodeURIComponent(cookieParts.shift());
+                    var cookieName = decodeURIComponent(cookieParts.shift()).trim();
                     var cookieContent = cookieParts.join('=');
 
                     if (config.name === cookieName) {
