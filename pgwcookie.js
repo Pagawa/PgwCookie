@@ -1,5 +1,5 @@
 /**
- * PgwCookie - Version 1.0
+ * PgwCookie - Version 1.1
  *
  * Copyright 2014, Jonathan M. Piat
  * http://pgwjs.com - http://pagawa.com
@@ -7,32 +7,33 @@
  * Released under the MIT license - http://opensource.org/licenses/MIT
  */
 ;(function($){
-    $.pgwCookie = function(config) {
+    $.pgwCookie = function(obj) {
 
-        // Check if the parameter name exists
-        if (! config.name) {
+        if (typeof obj == 'undefined') {
+            throw new Error('PgwCookie - Your parameter is not an object');
+        } else if (! obj.name) {
             throw new Error('PgwCookie - Please provide a name to your cookie');
         }
 
         // Set cookie
         var set = function() {
-            if (typeof config.expires === 'number') {
+            if (typeof obj.expires === 'number') {
                 var date = new Date();
-                date.setTime(date.getTime() + config.expires * 60 * 1000);
+                date.setTime(date.getTime() + obj.expires * 60 * 1000);
                 var expiresDate = date.toUTCString();
             } else {
-                delete config.expires;
+                delete obj.expires;
             }
 
-            if (config.json) {
-                config.value = JSON.stringify(config.value);
+            if (obj.json) {
+                obj.value = JSON.stringify(obj.value);
             }
 
-            var setCookie = config.name + '=' + encodeURIComponent(config.value) + ';'
-                + (config.expires ? 'expires=' + expiresDate + ';' : '')
-                + (config.path ? 'path=' + config.path + ';' : '')
-                + (config.domain ? 'domain=' + config.domain + ';' : '')
-                + (config.secure ? 'secure;' : '');
+            var setCookie = obj.name + '=' + encodeURIComponent(obj.value) + ';'
+                + (obj.expires ? 'expires=' + expiresDate + ';' : '')
+                + (obj.path ? 'path=' + obj.path + ';' : '')
+                + (obj.domain ? 'domain=' + obj.domain + ';' : '')
+                + (obj.secure ? 'secure;' : '');
 
             return (document.cookie = setCookie);
         };
@@ -47,9 +48,9 @@
                     var cookieName = decodeURIComponent(cookieParts.shift()).trim();
                     var cookieContent = cookieParts.join('=');
 
-                    if (config.name === cookieName) {
+                    if (obj.name === cookieName) {
                         cookieContent = decodeURIComponent(cookieContent);
-                        if (config.json && cookieContent.length > 0) {
+                        if (obj.json && cookieContent.length > 0) {
                             cookieContent = JSON.parse(cookieContent);
                         }
                         return cookieContent;
@@ -62,22 +63,22 @@
 
         // Remove cookie
         var remove = function() {
-            if (typeof read(config.name) == 'undefined') {
+            if (typeof read(obj.name) == 'undefined') {
                 return false;
             }
 
-            var removeCookie = config.name + '=;'
+            var removeCookie = obj.name + '=;'
                 + 'expires=Thu, 01 Jan 1970 00:00:01 GMT;'
-                + (config.path ? 'path=' + config.path + ';' : '')
-                + (config.domain ? 'domain=' + config.domain + ';' : '')
-                + (config.secure ? 'secure;' : '');
+                + (obj.path ? 'path=' + obj.path + ';' : '')
+                + (obj.domain ? 'domain=' + obj.domain + ';' : '')
+                + (obj.secure ? 'secure;' : '');
 
             return (document.cookie = removeCookie);
         };
 
-        // Choose the action type
-        if (typeof config.value != 'undefined') {
-            if (config.value === null) {
+        // Select the action
+        if (typeof obj.value != 'undefined') {
+            if (obj.value === null) {
                 return remove();
             } else {
                 return set();
