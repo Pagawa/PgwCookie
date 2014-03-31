@@ -3,10 +3,11 @@ PgwCookie
 
 The full documentation and an example are available on [PgwJS.com](http://pgwjs.com/pgwcookie/).
 
+
 Requirements
 ---------
 
-jQuery 1.0 (minimal version)
+jQuery 1.0 or Zepto.js 1.0 (minimal version)
 
 
 Changelog
