@@ -16,7 +16,7 @@ Contributing
 All any issues or pull requests must be submitted through GitHub.
 
 * To report an issue or a feature request, please use [GitHub Issues](https://github.com/Pagawa/PgwCookie/issues).
-* To create a pull request, please create a new branch for each feature or issue.
+* To make a pull request, please create a new branch for each feature or issue.
 
 
 Changelog
