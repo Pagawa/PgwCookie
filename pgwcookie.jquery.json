@@ -1,12 +1,16 @@
 {
     "name": "pgwcookie",
     "title": "PgwCookie",
-    "description": "Lightweight cookie manager for jQuery",
+    "description": "Lightweight cookie manager for jQuery for creating, reading and removing your JavaScript cookies.",
     "keywords": [
         "cookie",
-        "cookies"
+        "cookies",
+        "session",
+        "storage",
+        "data",
+        "utility"
     ],
-    "version": "1.2.0",
+    "version": "1.2.1",
     "author": {
         "name": "Jonathan M. Piat"
     },
