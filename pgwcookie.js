@@ -1,5 +1,5 @@
 /**
- * PgwCookie - Version 1.1
+ * PgwCookie - Version 1.2
  *
  * Copyright 2014, Jonathan M. Piat
  * http://pgwjs.com - http://pagawa.com
@@ -27,9 +27,11 @@
 
             if (obj.json) {
                 obj.value = JSON.stringify(obj.value);
+            } else if (! obj.raw) {
+                obj.value = encodeURIComponent(obj.value);
             }
 
-            var setCookie = obj.name + '=' + encodeURIComponent(obj.value) + ';'
+            var setCookie = obj.name + '=' + obj.value + ';'
                 + (obj.expires ? 'expires=' + expiresDate + ';' : '')
                 + (obj.path ? 'path=' + obj.path + ';' : '')
                 + (obj.domain ? 'domain=' + obj.domain + ';' : '')
@@ -49,10 +51,12 @@
                     var cookieContent = cookieParts.join('=');
 
                     if (obj.name === cookieName) {
-                        cookieContent = decodeURIComponent(cookieContent);
                         if (obj.json && cookieContent.length > 0) {
                             cookieContent = JSON.parse(cookieContent);
+                        } else if (! obj.raw) {
+                            cookieContent = decodeURIComponent(cookieContent);
                         }
+
                         return cookieContent;
                     }
                 }
