@@ -10,7 +10,7 @@
         "data",
         "utility"
     ],
-    "version": "1.2.2",
+    "version": "1.2.3",
     "author": {
         "name": "Jonathan M. Piat"
     },
@@ -21,8 +21,8 @@
     ],
     "licenses": [
         {
-        "type": "GNU CPLv3",
-        "url": "http://opensource.org/licenses/gpl-3.0"
+            "type": "GNU GPLv3",
+            "url": "http://opensource.org/licenses/gpl-3.0"
         }
     ],
     "bugs": "https://github.com/Pagawa/PgwCookie/issues",
