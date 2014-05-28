@@ -1,5 +1,5 @@
 /**
- * PgwCookie - Version 1.2
+ * PgwCookie - Version 1.3
  *
  * Copyright 2014, Jonathan M. Piat
  * http://pgwjs.com - http://pagawa.com
@@ -44,6 +44,12 @@
         var read = function() {
             if (document.cookie.length > 0) {
                 var cookies = document.cookie.split('; ');
+                
+                if (typeof String.prototype.trim !== 'function') {
+                    String.prototype.trim = function() {
+                        return this.replace(/^\s+|\s+$/g, ''); 
+                    }
+                }
 
                 for (var i in cookies) {
                     var cookieParts = cookies[i].split('=');
