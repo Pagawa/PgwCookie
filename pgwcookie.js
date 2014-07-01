@@ -1,5 +1,5 @@
 /**
- * PgwCookie - Version 1.3
+ * PgwCookie - Version 1.4
  *
  * Copyright 2014, Jonathan M. Piat
  * http://pgwjs.com - http://pagawa.com
@@ -97,4 +97,4 @@
             return read();
         }
     }
-})(jQuery);
+})(window.Zepto || window.jQuery);
