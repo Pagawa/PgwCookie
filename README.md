@@ -22,6 +22,7 @@ All issues or pull requests must be submitted through GitHub.
 ChangeLog
 ---------
 
+* 2014-07-02 - Fix for Zepto (Version 1.4)
 * 2014-05-28 - IE bug fix : trim() - Minor update (Version 1.3)
 * 2014-04-23 - Added the raw option - Minor update (Version 1.2)
 * 2014-03-21 - Added an object verification - Minor update (Version 1.1)
