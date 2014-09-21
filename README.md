@@ -1,7 +1,7 @@
 PgwCookie
 =========
 
-The full documentation and an example are available on [PgwJS.com](http://pgwjs.com/pgwcookie/).
+The full documentation and an example are available on [**PgwJS.com**/PgwCookie](http://pgwjs.com/pgwcookie/).
 
 
 Requirements
