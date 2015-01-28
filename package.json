@@ -1,0 +1,28 @@
+{
+  "name": "pgwcookie",
+  "title": "PgwCookie",
+  "description": "Cookie plugin for jQuery and Zepto",
+  "version": "1.4.0",
+  "main": "pgwcookie.js",
+  "homepage": "https://pgwjs.com/pgwcookie",
+  "author": "Jonathan M. Piat",
+  "license" : "GNU GPLv3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pagawa/PgwCookie.git"
+  },
+  "keywords": [
+    "cookie",
+    "cookies",
+    "session",
+    "storage",
+    "data",
+    "utility",
+    "jquery",
+    "jquery-plugin",
+    "zepto"
+  ],
+  "bugs": {
+    "url": "https://github.com/Pagawa/PgwCookie/issues"
+  }
+}
