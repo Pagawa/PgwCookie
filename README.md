@@ -6,7 +6,7 @@ The full documentation and an example are available on [**PgwJS.com**/PgwCookie]
 Installation
 ---------
 
-According to your site, select the installation mode:
+According to your system, select the preferred installation mode:
 
 ### JavaScript
 
