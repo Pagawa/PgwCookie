@@ -3,6 +3,19 @@ PgwCookie
 
 The full documentation and an example are available on [**PgwJS.com**/PgwCookie](http://pgwjs.com/pgwcookie/).
 
+Installation
+---------
+
+According to your site, select the installation mode:
+
+### JavaScript
+
+Download the plugin by cliking the button **Download ZIP** on the right.  
+To get the plugin updates, fork it on Github and regularly verify your plugin version.
+
+### Node / NPM
+
+    npm install pgwcookie
 
 Requirements
 ---------
